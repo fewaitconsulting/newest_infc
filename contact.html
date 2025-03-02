@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inter Niagara FC - Contact</title>
+
+  <link rel="stylesheet" href="contact_style.css">
+
+  <!-- (Optional) Font Awesome for icons 
+       If you prefer to use custom images or SVGs for icons,
+       you can remove this link and replace <i> tags below. -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-dP2Vp8iXnBmfzBzB1fy9AZ0E1PbE1m1pGw1n9qY/p1wA5Em/6f6E9gZZTqf8S41wkCRBAv7ftZpTez70AU6zDA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+
+
+  <header>
+    <nav class="navbar">
+      <div class="brand">
+        <img src="images/logo2.png" alt="Inter Niagara FC Logo" class="logo" />
+        <span class="brand-text">Inter Niagara FC</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Info Section -->
+  <section class="contact-info-section">
+    <div class="container contact-info-grid">
+      <!-- Email Us -->
+      <div class="contact-card">
+        <!-- Icon (Font Awesome or custom image) -->
+        <i class="fas fa-envelope contact-icon"></i>
+        <h3>Email Us</h3>
+        <p>
+          For inquiries, feedback or support, feel free to reach out to us at 
+          <a href="mailto:contact@fewaitconsulting.com">contact@fewaitconsulting.com</a>. 
+          We are here to assist you with any questions or concerns you may have.
+        </p>
+      </div>
+
+      <!-- Call Us -->
+      <div class="contact-card">
+        <i class="fas fa-phone-alt contact-icon"></i>
+        <h3>Call Us</h3>
+        <p>
+          You can also reach us by phone at 
+          <strong>+1 (555) 123-4567</strong>. Our team will be happy to provide 
+          assistance during business hours.
+        </p>
+      </div>
+
+      <!-- Visit Us -->
+      <div class="contact-card">
+        <i class="fas fa-map-marker-alt contact-icon"></i>
+        <h3>Visit Us</h3>
+        <p>
+          We’d love to see you! Visit us at 
+          <strong>123 Soccer Lane, Los Angeles, CA 90001, United States</strong>. 
+          Come and share your passion for soccer with us!
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="site-footer">
+    <div class="footer-top container">
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#">News</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="#">Forum</a></li>
+        </ul>
+      </div>
+      <div class="footer-col newsletter">
+        <h4>Subscribe to Our Newsletter</h4>
+        <p>Stay updated with the latest soccer news and insights by subscribing to our newsletter.</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2025 Inter Niagara FC. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS (for navbar scroll, etc.) -->
+  <script src="scripts.js"></script>
+  <script>
+document.addEventListener('scroll', function() {
+  const header = document.querySelector('header');
+  const scrollPosition = window.scrollY;
+
+  if (scrollPosition > 20) { // Adjust this value based on when you want the navbar to disappear
+    header.classList.add('hidden');
+  } else {
+    header.classList.remove('hidden');
+  }
+});
+
+  </script>
+</body>
+</html>

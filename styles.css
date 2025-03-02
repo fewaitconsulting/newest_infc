@@ -1,0 +1,762 @@
+/* ----------------------------------
+   1. RESET & BASE STYLES
+---------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* ----------------------------------
+     2. FIXED NAVBAR & SCROLL LOGIC
+  ---------------------------------- */
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background: transparent; /* Initially transparent */
+    transition: background-color 0.5s ease; /* Smooth transition */
+  }
+  
+  header.scrolled {
+    background: #007bff; /* Theme color (blue) */
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+  }
+  
+  .brand-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff; /* Visible on transparent background */
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 60px;
+    margin-right: 10px;
+  }  
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover,
+    .nav-links li a.active {
+    color: #ffeb3b; /* Highlight color on hover/active */
+    }
+  
+ /* ----------------------------------
+   3. NEW HERO CAROUSEL
+---------------------------------- */
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide {
+    min-width: 100%;
+    position: relative;
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the slide without distortion */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    width: 90%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+    border-radius: 10px;
+  }
+  
+  .overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .hero-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .hero-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Carousel Navigation Arrows */
+  .carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+  }
+  
+  .carousel-nav span {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background 0.3s;
+  }
+  
+  .carousel-nav span:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Carousel Indicators (Dots) */
+  .carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .carousel-indicators .indicator {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .carousel-indicators .indicator.active {
+    background: #fff;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 10s ease-in-out; /* Smooth zoom transition */
+  }
+  
+  .carousel-slide.active img {
+    transform: scale(1.1); /* Zoom in slightly */
+  }
+
+  /* ----------------------------------
+   4. INTER NIAGARA SECTION
+---------------------------------- */
+.inter-niagara {
+    background: #f9f9f9; /* Light background for contrast */
+    padding: 20px 0;
+    border-top: 5px solid #e0e0e0; /* Light border at the top */
+    margin: 0; /* Ensure no extra margin */
+  }
+  
+  .inter-niagara .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+  }
+  
+  .inter-niagara .section-content {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Space between logo and text */
+  }
+  
+  .inter-niagara .logo-container {
+    flex: 0 0 150px; /* Fixed width for the logo container */
+  }
+  
+  .inter-niagara .section-logo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease;
+  }
+
+  .inter-niagara .section-logo:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .inter-niagara .text-content {
+    flex: 1; /* Take up remaining space */
+  }
+  
+  .inter-niagara h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .inter-niagara p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    max-width: 800px; /* Limit text width for readability */
+  }
+
+  .inter-niagara .cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  
+  .inter-niagara .cta-btn:hover {
+    background: #218838;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .inter-niagara .section-content {
+      flex-direction: column; /* Stack logo and text on smaller screens */
+      text-align: center;
+    }
+  
+    .inter-niagara .logo-container {
+      flex: 0 0 auto; /* Reset fixed width */
+      margin-bottom: 20px;
+    }
+  
+    .inter-niagara h2 {
+      font-size: 2rem; /* Smaller heading on mobile */
+    }
+  
+    .inter-niagara p {
+      font-size: 1rem; /* Smaller text on mobile */
+    }
+  }
+
+  /* ----------------------------------
+   5. PILLARS SECTION (MISSION, VALUES, MEET THE TEAM)
+---------------------------------- */
+.pillars {
+    background: #fff; /* White background for contrast */
+    padding: 20px 0;
+    background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+    margin: 0; /* Ensure no extra margin */
+  }
+  
+  .pillars .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0; /* Remove inner padding */
+  }
+  
+  .pillars h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .pillar-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between columns */
+  }
+  
+  .pillar {
+    flex: 1;
+    background: #f9f9f9; /* Light background for each column */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pillar:hover {
+    transform: translateY(-10px); /* Rise effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+  
+  .pillar .icon img {
+    width: 60px; /* Adjust icon size */
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .pillar h3 {
+    font-size: 1.5rem;
+    color: #007bff; /* Theme color for headings */
+    margin-bottom: 15px;
+  }
+  
+  .pillar p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .pillar ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .pillar ul li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .pillar-container {
+      flex-direction: column; /* Stack columns on smaller screens */
+    }
+  
+    .pillar {
+      margin-bottom: 20px; /* Space between stacked columns */
+    }
+  
+    .pillar:last-child {
+      margin-bottom: 0; /* Remove margin for the last column */
+    }
+  }
+
+  /* ----------------------------------
+     4. CONTENT SECTIONS
+     (Intel Niagara, Mission, etc.)
+  ---------------------------------- */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  
+  .content-section {
+    text-align: center;
+    padding: 60px 0;
+  }
+  
+  .content-section h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    display: inline-block;
+  }
+  
+  .content-section p,
+  .content-section ul {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  .meet-teams ul {
+    list-style: none;
+    margin-top: 20px;
+  }
+  
+  .meet-teams ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+  
+  /* Latest Updates Section */
+.latest-updates {
+    padding: 60px 0;
+    background-color: #f8f9fa; /* Adjust as desired */
+    margin: 0;
+  }
+  
+  /* Header area (title + "View All News") */
+  .updates-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .updates-title h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  
+  .updates-title p {
+    margin: 0;
+    color: #666;
+  }
+  
+  .view-all-news {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #007bff;
+    border: 2px solid #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px; /* optional */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .view-all-news:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  
+  /* Grid of updates */
+  .updates-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    /* flex-wrap: wrap; */
+  }
+  
+  /* Each update card */
+  .update-card {
+    /* width: 32%; */
+    /* background: #fff; */
+    border-radius: 6px;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px; /* Adjust if you want bigger cards */
+    padding: 10px;
+  }
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  /* Hover zoom effect */
+  .image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-container:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Category label */
+  .category {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #007bff;
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+  
+  /* Update title & text */
+  .update-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .update-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .updates-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .updates-grid {
+      flex-direction: column;
+    }
+  }
+  
+  /* .tile {
+    background: #fff;
+    padding: 20px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .tile:hover {
+    transform: translateY(-5px);
+  }
+  
+  .tile img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  } */
+  
+  .cta-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: #f0a500;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .cta-btn:hover {
+    background: #d18e00;
+  }
+
+  /*************************************************
+  COMMUNITY CTA SECTION
+**************************************************/
+.community-cta {
+    background-color: #f8f9fa; /* Light background; adjust as needed */
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+  }
+  
+  .community-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .community-cta p {
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .cta-buttons {
+    display: inline-flex;
+    gap: 15px;
+  }
+  
+  .btn-join,
+  .btn-learn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  /* Join Now (filled) */
+  .btn-join {
+    background-color: #007bff; /* Green background */
+    color: #fff;
+    border: 2px solid #007bff;
+  }
+  
+  .btn-join:hover {
+    background-color: #218838; /* Darker green on hover */
+    border-color: #218838;
+  }
+  
+  /* Learn More (outline) */
+  .btn-learn {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+  }
+  
+  .btn-learn:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  
+  /*************************************************
+  FOOTER
+**************************************************/
+.site-footer {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    margin-top: 40px; /* Space above footer */
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .footer-top {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 30px;
+    padding: 40px 0;
+  }
+  
+  .footer-col h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #000;
+  }
+  
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-col ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-col ul li a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-col ul li a:hover {
+    color: #007bff; /* Match your theme color */
+  }
+  
+  /* Newsletter sign-up */
+  .newsletter form {
+    margin-top: 15px;
+  }
+  
+  .newsletter input[type="email"] {
+    width: 70%;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .newsletter button {
+    padding: 9px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .newsletter button:hover {
+    background-color: #218838;
+  }
+  
+  /* Footer bottom */
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  .footer-links a {
+    margin-left: 15px;
+    color: #555;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .footer-links a:hover {
+    color: #007bff;
+  }
+  
+  /* ----------------------------------
+     6. RESPONSIVE DESIGN
+  ---------------------------------- */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .nav-links {
+      margin-top: 10px;
+    }
+  
+    .hero-carousel {
+      height: 70vh; /* Adjust for smaller screens */
+    }
+  
+    .overlay h1 {
+      font-size: 2rem;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
+        row-gap: 30px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .footer-links a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+  }
+  

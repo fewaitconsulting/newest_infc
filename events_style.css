@@ -1,0 +1,214 @@
+/* Events Hero Section */
+.events-hero {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Adjust as desired */
+    background: url("images/banner.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  .hero-text {
+    color: #fff;
+    max-width: 600px;
+    padding: 0 20px;
+  }
+  
+  .events-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .events-hero p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+  }
+  
+  /* Reuse .hero-btn or define a new style */
+  .hero-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  .hero-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Upcoming Events */
+  .upcoming-events .section-description {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  .events-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .event-card {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px; /* Adjust if you want a certain size */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .event-image img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  
+  .event-info {
+    padding: 15px;
+    flex: 1;
+  }
+  
+  .event-date {
+    display: block;
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 8px;
+  }
+  
+  .event-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+  }
+  
+  .event-info p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .event-location {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  .register-btn {
+    display: inline-block;
+    background: #28a745;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  .register-btn:hover {
+    background: #218838;
+  }
+  
+  /* Past Events */
+  .past-events .section-description {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  .past-events-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .past-event-card {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    padding: 15px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .past-event-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .past-event-card h4 {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+  }
+  
+  .past-event-card p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  /* Optional CTA Before Footer */
+  .events-cta {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 60px 0;
+    margin-top: 40px;
+  }
+  
+  .events-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .events-cta p {
+    color: #555;
+    margin-bottom: 25px;
+  }
+  
+  .btn-join {
+    display: inline-block;
+    background-color: #28a745; /* Green */
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  .btn-join:hover {
+    background-color: #218838;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .events-grid,
+    .past-events-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    .event-card,
+    .past-event-card {
+      max-width: 90%;
+    }
+    .events-hero {
+      height: auto;
+      padding: 60px 0;
+    }
+    .events-hero h1 {
+      font-size: 2rem;
+    }
+  }
+  
