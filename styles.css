@@ -202,10 +202,48 @@
    4. INTER NIAGARA SECTION
 ---------------------------------- */
 .inter-niagara {
-    background: #f9f9f9; /* Light background for contrast */
+    /* background: #f9f9f9; 
     padding: 20px 0;
-    border-top: 5px solid #e0e0e0; /* Light border at the top */
-    margin: 0; /* Ensure no extra margin */
+    border-top: 5px solid #e0e0e0; 
+    margin: 0;  */
+    position: relative;
+    overflow: hidden; /* Ensure the bouncing ball stays within the section */
+    padding: 50px 0; /* Add some padding for spacing */
+    height: 400px; /* Set a fixed height for the section (adjust as needed) */
+  }
+  
+  /* Add a single football image */
+.inter-niagara::before {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Start at the bottom left */
+    left: 0; /* Start from the left */
+    width: 100px; /* Adjust the size of the football */
+    height: 100px; /* Adjust the size of the football */
+    background-image: url('images/football.jpeg'); /* Replace with your football image */
+    background-size: cover; /* Ensure the image fits */
+    z-index: -1; /* Place it behind the content */
+    animation: zigzag 8s infinite ease-in-out;
+  }
+
+  /* Zigzag animation with rotation */
+@keyframes zigzag {
+    0% {
+      transform: translate(0, 0) rotate(0deg); /* Start at bottom left */
+    }
+    25% {
+      transform: translate(25vw, -100%) rotate(90deg); /* Move to top at an angle */
+    }
+    50% {
+      transform: translate(50vw, 0) rotate(180deg); /* Move back to the bottom */
+    }
+    75% {
+      transform: translate(75vw, -100%) rotate(270deg); /* Move to top at an angle */
+    }
+    100% {
+      transform: translate(100vw, 0) rotate(360deg); /* Move to the bottom right */
+    }
+    
   }
   
   .inter-niagara .container {
