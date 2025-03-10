@@ -64,6 +64,12 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .event-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
   
   .event-image img {
@@ -140,6 +146,12 @@
     padding: 15px;
     text-align: center;
     margin: 0 auto;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .past-event-card:hover {
+    background: linear-gradient(45deg, #f3f3f3, #e0e0e0); /* Gradient background */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
   
   .past-event-card img {
