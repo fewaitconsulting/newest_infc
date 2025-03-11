@@ -208,7 +208,7 @@
     margin: 0;  */
     position: relative;
     overflow: hidden; /* Ensure the bouncing ball stays within the section */
-    padding: 50px 0; /* Add some padding for spacing */
+    padding: 40px 0; /* Add some padding for spacing */
     height: 400px; /* Set a fixed height for the section (adjust as needed) */
   }
   
@@ -256,7 +256,7 @@
   .inter-niagara .section-content {
     display: flex;
     align-items: center;
-    gap: 40px; /* Space between logo and text */
+    gap: 20px; /* Space between logo and text */
   }
   
   .inter-niagara .logo-container {
@@ -783,6 +783,40 @@
   
     .overlay h1 {
       font-size: 2rem;
+    }
+
+     /* Inter Niagara section adjustments */
+    .section-content {
+      flex-direction: column; /* Stack logo and text vertically */
+      align-items: center; /* Center items horizontally */
+      gap: 20px; /* Reduce spacing between logo and text */
+    }
+
+    .logo-container {
+      text-align: center; /* Center the logo */
+    }
+
+    .text-content {
+      text-align: center; /* Center text */
+    }
+
+    .text-content h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .section-logo {
+      max-width: 150px; /* Reduce logo size for smaller screens */
+      margin-bottom: 1px;
+      margin-top: 1px;
+    }
+
+    .text-content p {
+      font-size: 14px; /* Reduce paragraph size for smaller screens */
+    }
+
+    .cta-btn {
+      margin-top: 1px; /* Add margin above the button */
     }
 
     .footer-top {
