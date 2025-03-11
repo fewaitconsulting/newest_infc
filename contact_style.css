@@ -2,7 +2,7 @@
   CONTACT INFO SECTION
 ****************************************************/
 .contact-info-section {
-    padding: 60px 0;
+    padding: 5px 0;
     background-color: #fff; /* or #f8f9fa if you want a light gray background */
   }
   
@@ -55,70 +55,43 @@
     text-decoration: underline;
   }
 
-  /* Navbar styling */
-header {
-    position: fixed;
-    top: 0;
+  /* contacts hero */
+  .contacts-hero {
+    position: relative;
     width: 100%;
-    background: #007bff; /* Theme color (blue) */
-    z-index: 999;
-    transition: all 0.5s ease; /* Smooth transition for all properties */
-  }
-  
-  header.hidden {
-    transform: translateY(-100%); /* Move navbar out of view */
-  }
-  
-  .navbar {
+    height: 60vh; /* Adjust as desired */
+    background: url("images/banner.png") center/cover no-repeat;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 5%;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0;
   }
   
-  .brand-text {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #fff; /* Visible on transparent background */
-  }
-  
-  .brand {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    height: 60px;
-    margin-right: 10px;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-  }
-  
-  .nav-links li {
-    margin: 0 15px;
-  }
-  
-  .nav-links li a {
+  .hero-text {
     color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    max-width: 600px;
+    padding: 0 20px;
   }
   
-  .nav-links li a:hover,
-  .nav-links li a.active {
-    color: #ffeb3b; /* Highlight color on hover/active */
+  .contacts-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
   }
+  
+  .contacts-hero p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+  }
+
+  
 
 
 /*************************************************
   FOOTER
 **************************************************/
 .site-footer {
-    background-color: #fff;
+    background-color: #f0f1fc;
     border-top: 1px solid #ddd;
     margin-top: 40px; /* Space above footer */
     font-size: 0.95rem;
@@ -223,5 +196,11 @@ header {
       max-width: 500px; /* or 90% of the container, etc. */
       margin-bottom: 20px;
     }
+    .contacts-hero {
+      height: auto;
+      padding: 60px 0;
+    }
+    .contacts-hero h1 {
+      font-size: 2rem;
+    }
   }
-  

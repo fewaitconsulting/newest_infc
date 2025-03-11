@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Inter Niagara FC - Contact</title>
+  <title>Inter Niagara - Contact</title>
 
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="contact_style.css">
 
   <!-- (Optional) Font Awesome for icons 
@@ -19,23 +20,30 @@
   />
 </head>
 <body>
+<!-- Fixed Navbar (same as index.html) -->
+<header>
+  <nav class="navbar">
+    <div class="brand">
+      <a href="index.html">
+        <img src="images/logo2.png" alt="Inter Niagara Logo" class="logo" />
+      </a>
+      <span class="brand-text">Inter Niagara</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-
-  <header>
-    <nav class="navbar">
-      <div class="brand">
-        <a href="index.html">
-          <img src="images/logo2.png" alt="Inter Niagara FC Logo" class="logo" />
-        </a>
-        <span class="brand-text">Inter Niagara FC</span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- Hero Banner for Events -->
+<section class="contacts-hero">
+  <div class="hero-text">
+    <h1><br><br>Contacts <br><br></h1>
+    <!-- <a href="#upcoming-events" class="hero-btn">View Upcoming Events</a> -->
+  </div>
+</section>
 
   <!-- Contact Info Section -->
   <section class="contact-info-section">
@@ -47,7 +55,7 @@
         <h3>Email Us</h3>
         <p>
           For inquiries, feedback or support, feel free to reach out to us at 
-          <a href="mailto:contact@fewaitconsulting.com">contactus@interniagara.ca</a> 
+          <a href="mailto:contactus@interniagara.ca">contactus@interniagara.ca</a> 
           We are here to assist you with any questions or concerns you may have.
         </p>
       </div>
@@ -108,7 +116,7 @@
       </div>
     </div>
     <div class="footer-bottom container">
-      <p>© 2025 Inter Niagara FC. All rights reserved.</p>
+      <p>© 2025 Inter Niagara. All rights reserved.</p>
       <div class="footer-links">
         <a href="#">Terms and Conditions</a>
         <a href="#">Privacy Policy</a>
@@ -118,7 +126,7 @@
 
   <!-- Main JS (for navbar scroll, etc.) -->
   <script src="scripts.js"></script>
-  <script>
+  <!-- <script>
 document.addEventListener('scroll', function() {
   const header = document.querySelector('header');
   const scrollPosition = window.scrollY;
@@ -130,6 +138,6 @@ document.addEventListener('scroll', function() {
   }
 });
 
-  </script>
+  </script> -->
 </body>
 </html>

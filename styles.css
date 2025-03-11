@@ -433,7 +433,7 @@
   
   .content-section {
     text-align: center;
-    padding: 60px 0;
+    padding: 10px 0;
   }
   
   .content-section h2 {
@@ -462,8 +462,8 @@
   
   /* Latest Updates Section */
 .latest-updates {
-    padding: 60px 0;
-    background-color: #f8f9fa; /* Adjust as desired */
+    padding: 10px 0;
+    background-color: #ffffff; /* Adjust as desired */
     margin: 0;
   }
   
@@ -672,7 +672,7 @@
   FOOTER
 **************************************************/
 .site-footer {
-    background-color: #fff;
+    background-color: #f0f1fc; /* Light gray color */
     border-top: 1px solid #ddd;
     margin-top: 40px; /* Space above footer */
     font-size: 0.95rem;
